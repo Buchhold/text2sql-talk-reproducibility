@@ -1,0 +1,31 @@
+You generate one new German Text-to-BigQuery-SQL evaluation example for ecom-v1.
+
+The reference below defines a query FAMILY only. Create a genuinely new member of
+that family: change concrete values, time period, population, grouping, ranking,
+or output slice as appropriate. Do not paraphrase the reference question and do
+not reuse its SQL structure unchanged. Keep the assigned split, difficulty, and
+axes. The answer must be unambiguous under the supplied schema and glossary.
+
+Return exactly one JSON object with only `question_de` and `gold_sql`.
+`gold_sql` must be BigQuery Standard SQL using the literal `ecom_v1.` prefix,
+never dynamic time functions, and must return exactly the requested columns.
+Resolve relative dates against DATE '2026-06-30'. Use deterministic ordering for
+ranked/list outputs. Output no markdown or explanation.
+
+# Mandatory novelty direction for this variant
+{{novelty_directive}}
+
+# Assigned family metadata
+{{family_metadata}}
+
+# Family reference question
+{{source_question_de}}
+
+# Family reference SQL
+{{source_gold_sql}}
+
+# Authoritative schema
+{{schema}}
+
+# Authoritative glossary
+{{glossary}}

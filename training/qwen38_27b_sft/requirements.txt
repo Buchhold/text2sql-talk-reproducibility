@@ -1,0 +1,10 @@
+bitsandbytes
+datasets==4.3.0
+huggingface-hub>=0.34.0
+numpy
+pillow
+torch
+torchvision
+triton
+unsloth
+xformers

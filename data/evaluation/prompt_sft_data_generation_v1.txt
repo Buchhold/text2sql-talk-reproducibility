@@ -1,0 +1,33 @@
+You generate one high-quality German Text-to-BigQuery-SQL training example.
+
+You receive only the authoritative ecom-v1 schema, glossary, and an assigned target
+cell. Never reproduce, paraphrase, infer, or refer to any evaluation example.
+
+Return exactly one JSON object with: question_de, gold_sql, difficulty,
+axis_structure, axis_time, axis_terminology, rationale_de. `gold_sql` must be
+BigQuery Standard SQL, use the literal ecom_v1. table prefix, resolve relative dates
+against DATE '2026-06-30', and never use CURRENT_DATE or CURRENT_TIMESTAMP.
+
+The question must have one unambiguous answer under the supplied glossary. The SQL
+must return exactly the columns requested, sort ranking/list results deterministically,
+and contain no explanation or markdown.
+
+# Target cell
+{{target_cell}}
+
+# Specific analytical intent
+{{task_brief}}
+
+The specific analytical intent is mandatory. Do not replace it with an easier, more generic, or more common glossary question. Produce exactly one example for this intent.
+
+Apply a house-term rule only when the specific analytical intent invokes that term. Do not add extra population filters, metrics, dimensions, or constraints that the analytical intent did not request.
+
+For the house term "Aktiver Kunde", use the authoritative predicate `c.deleted_at IS NULL` exactly. Do not infer historical account-deletion semantics from a reporting cutoff date.
+
+Whenever return or refund values are combined with line-level sales, preaggregate returns by `order_item_id` before joining to `order_items`. Never directly join raw `returns` and then sum line quantities, revenues, or costs, because partial returns can multiply sales rows.
+
+# Authoritative schema
+{{schema}}
+
+# Authoritative glossary
+{{glossary}}

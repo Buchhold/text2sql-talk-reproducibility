@@ -1,0 +1,25 @@
+category_id,category_name,parent_category_id
+1,Electronics,
+2,Home & Living,
+3,Fashion,
+4,Sports & Outdoors,
+5,Books & Media,
+6,Grocery & Beverages,
+7,Smartphones & Accessories,1
+8,Computers & Laptops,1
+9,Audio & Headphones,1
+10,Kitchen & Dining,2
+11,Furniture,2
+12,Home Textiles,2
+13,Men's Clothing,3
+14,Women's Clothing,3
+15,Shoes & Bags,3
+16,Fitness Equipment,4
+17,Outdoor & Camping,4
+18,Cycling,4
+19,Books,5
+20,Music & Vinyl,5
+21,E-Readers,5
+22,Coffee & Tea,6
+23,Snacks,6
+24,Beverages,6

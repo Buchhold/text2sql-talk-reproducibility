@@ -1,0 +1,5 @@
+ARG BASE_IMAGE
+FROM ${BASE_IMAGE}
+
+COPY train.py /opt/qwen38-27b-sft/train.py
+RUN /opt/venv/bin/python -m py_compile /opt/qwen38-27b-sft/train.py

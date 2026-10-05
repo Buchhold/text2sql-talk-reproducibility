@@ -1,0 +1,14 @@
+.venv/
+.codex-tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local configuration and credentials
+.env
+.env.*
+
+# Locally regenerated figures
+results/figures/reproduced_*.png

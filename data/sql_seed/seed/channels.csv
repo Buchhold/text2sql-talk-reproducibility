@@ -1,0 +1,5 @@
+channel_id,channel_name,channel_type,commission_rate
+1,webshop,direct,0.0
+2,app,direct,0.0
+3,marketplace_a,partner,0.15
+4,phone,direct,0.0

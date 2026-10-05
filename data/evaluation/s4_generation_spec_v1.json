@@ -1,0 +1,19 @@
+{
+  "generation_version": "s4_train_generation_v1",
+  "schema": "ecom-v1",
+  "allowed_context_files": ["ecom-v1-schema.md", "glossary.md"],
+  "prohibited_input_files": ["eval_v1.jsonl", "src/eval_v1_examples_source.py", "results_p0_gemini-3.8-flash.jsonl", "results_p1_gemini-3.8-flash.jsonl", "results_p2_gemini-3.8-flash.jsonl"],
+  "generator": {"model": "gemini-3.8-flash", "temperature": 0.2, "max_output_tokens": 2048},
+  "review": {"required": true, "independent_model": true},
+  "quality_gates": ["json_schema", "static_sql", "bigquery_execution", "nonempty_result", "semantic_review", "cross_dataset_dedup"],
+  "raw_candidate_budget": {"min": 1500, "max": 2000},
+  "target_distribution": {"easy": 334, "medium": 333, "hard": 333},
+  "target_accepted_examples": 1000,
+  "target_house_term_share": {"min": 0.4, "max": 0.5},
+  "data_size_ablation": [100, 250, 500, 1000],
+  "axes": {
+    "structure": ["flat", "join_group", "cte_window_set"],
+    "time": ["none", "window_abs", "window_rel", "period_compare"],
+    "terminology": ["literal", "house_term"]
+  }
+}
